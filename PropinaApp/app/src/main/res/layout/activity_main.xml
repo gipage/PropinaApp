@@ -10,6 +10,27 @@
 
     <!-- vistas lado derecho -->
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/bottom_background" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/top_background" />
+
     <TextView
         android:id="@+id/tvTotalLabel"
         android:layout_width="wrap_content"
@@ -45,7 +66,7 @@
         android:id="@+id/tvPropinaLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="50dp"
         android:text="Propina"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="@+id/tvPorcentajeLabel"
@@ -62,6 +83,17 @@
         app:layout_constraintTop_toBottomOf="@+id/tvMontoLabel"
         tools:text="24%" />
 
+    <TextView
+        android:id="@+id/tvMontoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="288dp"
+        android:text="Monto"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/etCantidad"
         android:layout_width="wrap_content"
@@ -70,22 +102,11 @@
         android:ems="8"
         android:hint="Ingrese monto"
         android:inputType="numberDecimal"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/tvMontoLabel"
         app:layout_constraintStart_toEndOf="@+id/tvMontoLabel"
         app:layout_constraintTop_toTopOf="@+id/tvMontoLabel"
-        app:layout_constraintVertical_bias="0.344" />
-
-    <TextView
-        android:id="@+id/tvMontoLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="316dp"
-        android:text="Monto"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintVertical_bias="0.291" />
 
     <TextView
         android:id="@+id/tvTotalCantidad"
@@ -98,16 +119,40 @@
         app:layout_constraintVertical_bias="1.0"
         tools:text="103.11" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="365dp"
-        android:layout_height="371dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="4dp"
-        app:layout_constraintBottom_toTopOf="@+id/etCantidad"
+    <TextView
+        android:id="@+id/tvFooter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="Hecho por Gino Paoletti 🚀"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.638"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="361dp"
+        android:layout_height="266dp"
+        android:layout_marginTop="15dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/escena" />
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:srcCompat="@drawable/alcanciavf" />
+
+    <TextView
+        android:id="@+id/tvCalidadPropina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/seekBarPropina"
+        app:layout_constraintStart_toStartOf="@+id/seekBarPropina"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarPropina"
+        tools:text="Aceptable" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
